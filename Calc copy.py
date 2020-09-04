@@ -15,9 +15,13 @@ elif tip_question == "no":
 # else:
 #     print("please input something valid")
 
+#Money spent
 number = input("Enter amount of money spent pre-tax")
+#Money spent plus tip
 input_number = float(number) * (1+((float(percent_tip)/100)))
+#Money spent plus tax and tip
 conversion = float(number) * 1.085 + (input_number - float(number))
+#Round
 conversion_rounded = round(conversion, 3)
 tax_alone = round(float(number) * 1.085 - float(number),2)
 tips_alone = round(input_number - float(number),2)
